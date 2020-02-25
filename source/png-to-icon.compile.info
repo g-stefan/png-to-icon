@@ -1,0 +1,3 @@
+--exe png-to-icon
+--use-path=source
+--use-project=xyo-pixel32.static
