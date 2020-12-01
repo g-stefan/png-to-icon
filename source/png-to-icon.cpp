@@ -96,7 +96,9 @@ namespace Main {
 			if(strcmp(cmdS[k], "--level") == 0) {
 				++k;
 				if(k < cmdN) {
-					sscanf(cmdS[k], "%02X", &optLevel);
+					if(sscanf(cmdS[k], "%02X", &optLevel)!=1){
+						optLevel = 48;
+					};
 					continue;
 				};
 				showUsage();
@@ -105,7 +107,11 @@ namespace Main {
 			if(strcmp(cmdS[k], "--background") == 0) {
 				++k;
 				if(k < cmdN) {
-					sscanf(cmdS[k], "%02X%02X%02X", &optCR, &optCG, &optCB);
+					if(sscanf(cmdS[k], "%02X%02X%02X", &optCR, &optCG, &optCB) != 3){
+						optCR = 0;
+						optCG = 0;
+						optCB = 0;
+					};
 					optBackground = XYO_PIXEL32_PIXEL(optCR, optCG, optCB, 0xFF);
 					optUseBackgroundAlpha = true;
 					continue;
