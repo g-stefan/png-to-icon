@@ -5,7 +5,7 @@ rem Created by Grigore Stefan <g_stefan@yahoo.com>
 
 SETLOCAL ENABLEDELAYEDEXPANSION
 
-echo -^> git-release-check png-to-icon
+echo -^> github-release-check png-to-icon
 
 set PROJECT=png-to-icon
 if not exist source\%PROJECT%.version.ini echo Error - no version & exit 1
