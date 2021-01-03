@@ -3,6 +3,6 @@
 # http://unlicense.org/
 # Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo "-> clean-local-release png-to-icon"
+echo "-> clean-release png-to-icon"
 
 rm -rf release
