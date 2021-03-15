@@ -17,5 +17,5 @@ cmdX(){
 	fi
 }
 
-cmdX xyo-cc --mode=$ACTION @source/png-to-icon.compile
+cmdX xyo-cc --mode=$ACTION @build/source/png-to-icon.compile
 

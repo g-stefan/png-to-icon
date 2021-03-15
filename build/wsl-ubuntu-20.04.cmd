@@ -3,7 +3,4 @@ rem Public domain
 rem http://unlicense.org/
 rem Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo -^> clean png-to-icon
-
-if exist bin\ rmdir /Q /S bin
-if exist build\ rmdir /Q /S build
+ubuntu2004.exe -c "./build/wsl.sh %1"

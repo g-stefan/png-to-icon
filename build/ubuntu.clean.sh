@@ -5,5 +5,5 @@
 
 echo "-> clean png-to-icon"
 
-rm -rf bin
-rm -rf build
+rm -rf output
+rm -rf temp

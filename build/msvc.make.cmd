@@ -18,5 +18,5 @@ echo "Error: %ACTION%"
 exit 1
 :StepX
 
-call :cmdX xyo-cc --mode=%ACTION% @source/png-to-icon.compile
+call :cmdX xyo-cc --mode=%ACTION% @build/source/png-to-icon.compile
 
