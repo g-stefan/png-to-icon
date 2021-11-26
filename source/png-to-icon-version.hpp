@@ -10,10 +10,10 @@
 #ifndef PNG_TO_ICON_VERSION_HPP
 #define PNG_TO_ICON_VERSION_HPP
 
-#define PNG_TO_ICON_VERSION_ABCD                1,9,0,21
-#define PNG_TO_ICON_VERSION_STR                 "1.9.0"
+#define PNG_TO_ICON_VERSION_ABCD                1,11,0,21
+#define PNG_TO_ICON_VERSION_STR                 "1.11.0"
 #define PNG_TO_ICON_VERSION_STR_BUILD           "21"
-#define PNG_TO_ICON_VERSION_STR_DATETIME        "2021-11-15 16:51:49"
+#define PNG_TO_ICON_VERSION_STR_DATETIME        "2021-11-22 17:07:57"
 
 #ifndef XYO_RC
 
