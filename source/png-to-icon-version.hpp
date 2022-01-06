@@ -1,5 +1,5 @@
 //
-// Png To Icon
+// PNG To Icon
 //
 // Copyright (c) 2020-2022 Grigore Stefan <g_stefan@yahoo.com>
 // Created by Grigore Stefan <g_stefan@yahoo.com>
@@ -17,7 +17,7 @@
 
 #ifndef XYO_RC
 
-namespace PngToIcon {
+namespace PNGToIcon {
 	namespace Version {
 		const char *version();
 		const char *build();

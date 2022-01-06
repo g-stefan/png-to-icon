@@ -1,0 +1,7 @@
+--lib png-to-icon
+--def=PNG_TO_ICON_LIBRARY
+--src-hpp=source/png-to-icon.hpp
+--build-include
+--no-default-include
+--install-include-direct
+--use-project=xyo-pixel32.static

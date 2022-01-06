@@ -18,3 +18,4 @@ cmdX(){
 }
 
 cmdX xyo-cc --mode=$ACTION @build/source/png-to-icon.compile
+cmdX xyo-cc --mode=$ACTION @build/source/png-to-icon.library.compile

@@ -1,5 +1,5 @@
 //
-// Png To Icon
+// PNG To Icon
 //
 // Copyright (c) 2020-2022 Grigore Stefan <g_stefan@yahoo.com>
 // Created by Grigore Stefan <g_stefan@yahoo.com>
@@ -9,7 +9,7 @@
 
 #include "png-to-icon-version.hpp"
 
-namespace PngToIcon {
+namespace PNGToIcon {
 	namespace Version {
 
 		static const char *version_ = "$VERSION_VERSION";

@@ -1,5 +1,5 @@
 //
-// Png To Icon
+// PNG To Icon
 //
 // Copyright (c) 2020-2022 Grigore Stefan <g_stefan@yahoo.com>
 // Created by Grigore Stefan <g_stefan@yahoo.com>
@@ -9,12 +9,12 @@
 
 #include "png-to-icon-license.hpp"
 
-namespace PngToIcon {
+namespace PNGToIcon {
 	namespace License {
 
 		static const char *license_ =
 			"\r\n"
-			"Png To Icon\r\n"
+			"PNG To Icon\r\n"
 			"\r\n"
 			"MIT License (MIT)\r\n"
 			"\r\n"

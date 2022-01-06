@@ -1,5 +1,5 @@
 //
-// Png To Icon
+// PNG To Icon
 //
 // Copyright (c) 2020-2022 Grigore Stefan <g_stefan@yahoo.com>
 // Created by Grigore Stefan <g_stefan@yahoo.com>
@@ -12,36 +12,21 @@
 
 #include "xyo-pixel32.hpp"
 
+#include "png-to-icon.hpp"
 #include "png-to-icon-copyright.hpp"
 #include "png-to-icon-license.hpp"
+#ifndef PNG_TO_ICON_NO_VERSION
 #include "png-to-icon-version.hpp"
+#endif
 
-namespace Main {
+namespace PNGToIcon {
 	using namespace XYO;
 	using namespace XYO::Pixel32;
 
-	class Application :
-		public virtual IMain {
-			XYO_DISALLOW_COPY_ASSIGN_MOVE(Application);
-		protected:
-
-			void showUsage();
-			void showLicense();
-
-		public:
-			inline Application() {};
-			int main(int cmdN, char *cmdS[]);
-	};
-
-	void Application::showLicense() {
-		printf("%s", PngToIcon::License::content());
-		printf("%s", XYO::Pixel32::License::content());
-	};
-
 	void Application::showUsage() {
 		printf("png-to-icon - Convert PNG to Icon");
-		printf("version %s build %s [%s]\n", PngToIcon::Version::version(), PngToIcon::Version::build(), PngToIcon::Version::datetime());
-		printf("%s\n\n", PngToIcon::Copyright::fullCopyright());
+		showVersion();
+		printf("%s\n\n", PNGToIcon::Copyright::fullCopyright());
 		printf("\n");
 
 		printf("Usage:\n");
@@ -50,6 +35,17 @@ namespace Main {
 		printf("\tpng-to-icon [--level XX] [-background XXXXXX] --list in out.ico\n");
 		printf("\tpng-to-icon [--level XX] [-background XXXXXX] --list in --list-x 16,24,32... out.ico\n");
 		printf("\n");
+	};
+
+	void Application::showLicense() {
+		printf("%s", PNGToIcon::License::content());
+		printf("%s", XYO::Pixel32::License::content());
+	};
+
+	void Application::showVersion() {
+#ifndef PNG_TO_ICON_NO_VERSION
+		printf("version %s build %s [%s]\n", PNGToIcon::Version::version(), PNGToIcon::Version::build(), PNGToIcon::Version::datetime());
+#endif
 	};
 
 	int Application::main(int cmdN, char *cmdS[]) {
@@ -192,5 +188,6 @@ namespace Main {
 
 };
 
-XYO_APPLICATION_MAIN_STD(Main::Application);
-
+#ifndef PNG_TO_ICON_LIBRARY
+XYO_APPLICATION_MAIN_STD(PNGToIcon::Application);
+#endif
