@@ -13,17 +13,16 @@ namespace PNGToIcon {
 	using namespace XYO;
 	using namespace XYO::Pixel32;
 
-	class Application :
-		public virtual IMain {
+	class Application : public virtual IMain {
 			XYO_DISALLOW_COPY_ASSIGN_MOVE(Application);
-		protected:
 
+		protected:
 			void showUsage();
 			void showLicense();
 			void showVersion();
 
 		public:
-			inline Application() {};
+			inline Application(){};
 			int main(int cmdN, char *cmdS[]);
 	};
 

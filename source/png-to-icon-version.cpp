@@ -12,10 +12,10 @@
 namespace PNGToIcon {
 	namespace Version {
 
-		static const char *version_ = "1.15.0";
-		static const char *build_ = "28";
-		static const char *versionWithBuild_ = "1.15.0.28";
-		static const char *datetime_ = "2022-01-09 01:13:07";
+		static const char *version_ = "1.20.0";
+		static const char *build_ = "32";
+		static const char *versionWithBuild_ = "1.20.0.32";
+		static const char *datetime_ = "2022-04-04 01:44:51";
 
 		const char *version() {
 			return version_;
@@ -32,4 +32,3 @@ namespace PNGToIcon {
 
 	};
 };
-

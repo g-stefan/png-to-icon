@@ -10,10 +10,10 @@
 #ifndef PNG_TO_ICON_VERSION_HPP
 #define PNG_TO_ICON_VERSION_HPP
 
-#define PNG_TO_ICON_VERSION_ABCD                1,15,0,28
-#define PNG_TO_ICON_VERSION_STR                 "1.15.0"
-#define PNG_TO_ICON_VERSION_STR_BUILD           "28"
-#define PNG_TO_ICON_VERSION_STR_DATETIME        "2022-01-09 01:13:07"
+#define PNG_TO_ICON_VERSION_ABCD 1,20,0,32
+#define PNG_TO_ICON_VERSION_STR "1.20.0"
+#define PNG_TO_ICON_VERSION_STR_BUILD "32"
+#define PNG_TO_ICON_VERSION_STR_DATETIME "2022-04-04 01:44:51"
 
 #ifndef XYO_RC
 
@@ -28,4 +28,3 @@ namespace PNGToIcon {
 
 #endif
 #endif
-

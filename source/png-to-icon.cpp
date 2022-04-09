@@ -16,7 +16,7 @@
 #include "png-to-icon-copyright.hpp"
 #include "png-to-icon-license.hpp"
 #ifndef PNG_TO_ICON_NO_VERSION
-#include "png-to-icon-version.hpp"
+#	include "png-to-icon-version.hpp"
 #endif
 
 namespace PNGToIcon {
@@ -71,28 +71,28 @@ namespace PNGToIcon {
 
 		String listX;
 
-		for(k = 1; k < cmdN; ++k) {
-			if(strcmp(cmdS[k], "--license") == 0) {
+		for (k = 1; k < cmdN; ++k) {
+			if (strcmp(cmdS[k], "--license") == 0) {
 				optShowLicense = true;
 				continue;
 			};
-			if(strcmp(cmdS[k], "--list") == 0) {
+			if (strcmp(cmdS[k], "--list") == 0) {
 				optIsList = true;
 				continue;
 			};
-			if(strcmp(cmdS[k], "--list-x") == 0) {
+			if (strcmp(cmdS[k], "--list-x") == 0) {
 				++k;
-				if(k < cmdN) {
-					listX=cmdS[k];
+				if (k < cmdN) {
+					listX = cmdS[k];
 					continue;
 				};
 				showUsage();
 				continue;
 			};
-			if(strcmp(cmdS[k], "--level") == 0) {
+			if (strcmp(cmdS[k], "--level") == 0) {
 				++k;
-				if(k < cmdN) {
-					if(sscanf(cmdS[k], "%02X", &optLevel)!=1){
+				if (k < cmdN) {
+					if (sscanf(cmdS[k], "%02X", &optLevel) != 1) {
 						optLevel = 48;
 					};
 					continue;
@@ -100,10 +100,10 @@ namespace PNGToIcon {
 				showUsage();
 				return 1;
 			};
-			if(strcmp(cmdS[k], "--background") == 0) {
+			if (strcmp(cmdS[k], "--background") == 0) {
 				++k;
-				if(k < cmdN) {
-					if(sscanf(cmdS[k], "%02X%02X%02X", &optCR, &optCG, &optCB) != 3){
+				if (k < cmdN) {
+					if (sscanf(cmdS[k], "%02X%02X%02X", &optCR, &optCG, &optCB) != 3) {
 						optCR = 0;
 						optCG = 0;
 						optCB = 0;
@@ -115,48 +115,47 @@ namespace PNGToIcon {
 				showUsage();
 				return 1;
 			};
-			if(optVar == 0) {
+			if (optVar == 0) {
 				inPng = cmdS[k];
 				++optVar;
 				continue;
 			};
-			if(optVar == 1) {
+			if (optVar == 1) {
 				outIco = cmdS[k];
 				++optVar;
 				continue;
 			};
 		};
 
-		if(optShowLicense) {
+		if (optShowLicense) {
 			showLicense();
 		};
 
-		if(optVar < 2) {
-			if(optShowLicense) {
+		if (optVar < 2) {
+			if (optShowLicense) {
 				return 0;
 			};
 			showUsage();
 			return 1;
 		};
 
-		if(optIsList) {
+		if (optIsList) {
 
-			if(listX.length()>0) {
+			if (listX.length() > 0) {
 				TDynamicArray<String> resolutionList;
-				if(String::explode(",", listX, resolutionList)) {
+				if (String::explode(",", listX, resolutionList)) {
 
-					for(k=0; k<resolutionList.length(); ++k) {
-						resolutionList[k]=String(inPng)+"-"+resolutionList[k]+".png";
+					for (k = 0; k < resolutionList.length(); ++k) {
+						resolutionList[k] = String(inPng) + "-" + resolutionList[k] + ".png";
 					};
 
-					if(Process::pngToIcon(resolutionList, outIco, optLevel, optUseBackgroundAlpha, optBackground)) {
+					if (Process::pngToIcon(resolutionList, outIco, optLevel, optUseBackgroundAlpha, optBackground)) {
 						return 0;
 					};
 
 					return 1;
 				};
 			};
-
 
 			String file48;
 			String file32;
@@ -172,14 +171,14 @@ namespace PNGToIcon {
 			file16 = inPng;
 			file16 << "-16.png";
 
-			if(Process::pngToIcon(file48, file32, file24, file16, outIco, optLevel, optUseBackgroundAlpha, optBackground)) {
+			if (Process::pngToIcon(file48, file32, file24, file16, outIco, optLevel, optUseBackgroundAlpha, optBackground)) {
 				return 0;
 			};
 
 			return 1;
 		};
 
-		if(Process::pngToIcon(inPng, outIco, optLevel, optUseBackgroundAlpha, optBackground)) {
+		if (Process::pngToIcon(inPng, outIco, optLevel, optUseBackgroundAlpha, optBackground)) {
 			return 0;
 		};
 
