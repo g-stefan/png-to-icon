@@ -1,0 +1,11 @@
+// PNG to ICON
+// Copyright (c) 2022 Grigore Stefan <g_stefan@yahoo.com>
+// MIT License (MIT) <http://opensource.org/licenses/MIT>
+// SPDX-FileCopyrightText: 2022 Grigore Stefan <g_stefan@yahoo.com>
+// SPDX-License-Identifier: MIT
+
+#include <XYO/PNGToICON/Application.rh>
+#include <XYO/PNGToICON/Copyright.rh>
+#include <XYO/PNGToICON/Version.rh>
+
+XYO_APPLICATION_VERSION_INFO(XYO_PNGTOICON,"png-to-icon.exe","PNGToICON - Convert PNG file to ICON file")

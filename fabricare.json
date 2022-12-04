@@ -1,0 +1,34 @@
+{
+	"solution" : {
+		"name" : "png-to-icon",
+		"type" : "xyo-cpp",
+		"projects" : [
+			{
+				"name" : "png-to-icon.application",
+				"type" : "xyo-cpp",
+				"make" : "lib",
+				"SPDX-License-Identifier": "MIT",
+				"sourcePath" : "XYO/PNGToICON",
+				"dependency" : [
+					"xyo-pixel32"
+				],
+				"defines" : [
+					"XYO_PNGTOICON_LIBRARY"
+				],
+				"linkVersion" : "png-to-icon"
+			},
+			{
+				"name" : "png-to-icon",
+				"type" : "xyo-cpp",
+				"make" : "exe.static",
+				"SPDX-License-Identifier": "MIT",
+				"sourcePath" : "XYO/PNGToICON",
+				"dependency" : [
+					"xyo-pixel32",
+					"libpng",
+					"libz"
+				]
+			}
+		]
+	}
+}
