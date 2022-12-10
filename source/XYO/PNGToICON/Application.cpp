@@ -14,7 +14,7 @@ namespace XYO::PNGToICON {
 	void Application::showUsage() {
 		printf("png-to-icon - Convert PNG to ICON");
 		showVersion();
-		printf("%s\n\n", PNGToICON::Copyright::fullCopyright());
+		printf("%s\n\n", PNGToICON::Copyright::copyright());
 
 		printf("Usage:\n");
 		printf("\tpng-to-icon --license\n");
@@ -24,9 +24,8 @@ namespace XYO::PNGToICON {
 		printf("\n");
 	};
 
-	void Application::showLicense() {		
-		printf("%s%s", PNGToICON::License::licenseHeader(), PNGToICON::License::licenseBody());
-		printf("%s", XYO::Pixel32::License::licenseBody());
+	void Application::showLicense() {
+		printf("%s", XYO::Pixel32::License::license());
 	};
 
 	void Application::showVersion() {

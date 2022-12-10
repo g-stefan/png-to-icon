@@ -7,10 +7,9 @@
 #ifndef XYO_PNGTOICON_COPYRIGHT_RH
 #define XYO_PNGTOICON_COPYRIGHT_RH
 
-#define XYO_PNGTOICON_COPYRIGHT "Copyright (c) 2022 Grigore Stefan"
+#define XYO_PNGTOICON_COPYRIGHT "Copyright (c) 2022 Grigore Stefan <g_stefan@yahoo.com>"
 #define XYO_PNGTOICON_PUBLISHER "Grigore Stefan"
 #define XYO_PNGTOICON_COMPANY XYO_PNGTOICON_PUBLISHER
 #define XYO_PNGTOICON_CONTACT "g_stefan@yahoo.com"
-#define XYO_PNGTOICON_FULL_COPYRIGHT XYO_PNGTOICON_COPYRIGHT " <" XYO_PNGTOICON_CONTACT ">"
 
 #endif
