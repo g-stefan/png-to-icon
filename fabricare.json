@@ -24,9 +24,7 @@
 				"SPDX-License-Identifier": "MIT",
 				"sourcePath" : "XYO/PNGToICON",
 				"dependency" : [
-					"xyo-pixel32",
-					"libpng",
-					"libz"
+					"xyo-pixel32"
 				]
 			}
 		]
