@@ -15,8 +15,7 @@
 				"defines" : [
 					"XYO_PNGTOICON_LIBRARY"
 				],
-				"linkVersion" : "png-to-icon",
-				"noRelease" : true
+				"linkVersion" : "png-to-icon"
 			},
 			{
 				"name" : "png-to-icon",
@@ -26,7 +25,9 @@
 				"sourcePath" : "XYO/PNGToICON",
 				"dependency" : [
 					"xyo-pixel32"
-				]
+				],
+				"hasRelease" : true,
+				"githubRelease" : true
 			}
 		]
 	}
