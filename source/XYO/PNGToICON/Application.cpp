@@ -14,7 +14,7 @@ namespace XYO::PNGToICON {
 	void Application::showUsage() {
 		printf("png-to-icon - Convert PNG to ICON");
 		showVersion();
-		printf("%s\n\n", PNGToICON::Copyright::copyright().c_str());
+		printf("%s\n\n", PNGToICON::Copyright::copyright());
 
 		printf("Usage:\n");
 		printf("\tpng-to-icon --license\n");
@@ -132,7 +132,7 @@ namespace XYO::PNGToICON {
 
 			if (listX.length() > 0) {
 				TDynamicArray<String> resolutionList;
-				if (String::explode(",", listX, resolutionList)) {
+				if (StringX::explode(",", listX, resolutionList)) {
 
 					for (k = 0; k < resolutionList.length(); ++k) {
 						resolutionList[k] = String(inPng) + "-" + resolutionList[k] + ".png";
