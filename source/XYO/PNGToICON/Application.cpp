@@ -132,7 +132,7 @@ namespace XYO::PNGToICON {
 
 			if (listX.length() > 0) {
 				TDynamicArray<String> resolutionList;
-				if (StringX::explode(",", listX, resolutionList)) {
+				if (listX.explode(",", resolutionList)) {
 
 					for (k = 0; k < resolutionList.length(); ++k) {
 						resolutionList[k] = String(inPng) + "-" + resolutionList[k] + ".png";
