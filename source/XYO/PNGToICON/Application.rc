@@ -8,5 +8,5 @@
 #include <XYO/PNGToICON/Copyright.rh>
 #include <XYO/PNGToICON/Version.rh>
 
-XYO_APPLICATION_VERSION_INFO(XYO_PNGTOICON,"png-to-icon.exe","PNGToICON - Convert PNG file to ICON file")
-XYO_APPLICATION_MANIFEST("Application.manifest")
+XYO_PLATFORM_VERSION_INFO(XYO_PNGTOICON,"png-to-icon.exe","PNGToICON - Convert PNG file to ICON file")
+XYO_PLATFORM_MANIFEST("Application.manifest")
