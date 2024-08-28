@@ -18,7 +18,7 @@
 			},
 			{
 				"name" : "png-to-icon",
-				"make" : "exe.static",
+				"make" : "exe",
 				"SPDX-License-Identifier": "MIT",
 				"sourcePath" : "XYO/PNGToICON",
 				"dependency" : [
