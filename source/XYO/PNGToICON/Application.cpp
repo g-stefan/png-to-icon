@@ -12,15 +12,15 @@
 namespace XYO::PNGToICON {
 
 	void Application::showUsage() {
-		printf("png-to-icon - Convert PNG to ICON");
+		printf("png-to-icon - Convert PNG to ICON\n");
 		showVersion();
 		printf("%s\n\n", PNGToICON::Copyright::copyright());
 
 		printf("Usage:\n");
 		printf("\tpng-to-icon --license\n");
-		printf("\tpng-to-icon [--level XX] [-background XXXXXX] in.png out.ico\n");
-		printf("\tpng-to-icon [--level XX] [-background XXXXXX] --list in out.ico\n");
-		printf("\tpng-to-icon [--level XX] [-background XXXXXX] --list in --list-x 16,24,32... out.ico\n");
+		printf("\tpng-to-icon [--level 0-255] [--background RRGGBB] in.png out.ico\n");
+		printf("\tpng-to-icon [--level 0-255] [--background RRGGBB] --list in out.ico\n");
+		printf("\tpng-to-icon [--level 0-255] [--background RRGGBB] --list in --list-x 16,24,32... out.ico\n");
 		printf("\n");
 	};
 
@@ -44,6 +44,7 @@ namespace XYO::PNGToICON {
 		int optVar;
 		bool optShowLicense;
 		int optLevel;
+		char optLevelEnd;
 		bool optUseBackgroundAlpha;
 		Pixel optBackground;
 		uint32_t optCR;
@@ -81,8 +82,10 @@ namespace XYO::PNGToICON {
 			if (strcmp(cmdS[k], "--level") == 0) {
 				++k;
 				if (k < cmdN) {
-					if (sscanf(cmdS[k], "%02X", &optLevel) != 1) {
-						optLevel = 48;
+					// decimal 0-255, nothing after the number
+					if ((sscanf(cmdS[k], "%d%c", &optLevel, &optLevelEnd) != 1) || (optLevel < 0) || (optLevel > 255)) {
+						printf("Error: level must be a number from 0 to 255\n");
+						return 1;
 					};
 					continue;
 				};

@@ -1,5 +1,6 @@
 {
 	"solution" : {
+		"namespace" : "xyo",
 		"name" : "png-to-icon",
 		"type" : "xyo-cpp",
 		"projects" : [
